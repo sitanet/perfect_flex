@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Detail</title>
+</head>
+<body>
+    <h1>Company Detail: {{ company.branch_name }}</h1>
+    <p>Branch Code: {{ company.branch_code }}</p>
+    <p>Contact Person: {{ company.contact_person }}</p>
+    <p>Office Address: {{ company.office_address }}</p>
+    <p>Contact Phone No: {{ company.contact_phone_no }}</p>
+    <p>Session Date: {{ company.br_session_date }}</p>
+    <p>Registration Date: {{ company.registration_date }}</p>
+    <p>Expiration Date: {{ company.expiration_date }}</p>
+    <p>License Key: {{ company.license_key }}</p>
+    <a href="{% url 'update_company' company.pk %}">Edit</a>
+    <a href="{% url 'company_delete' company.pk %}">Delete</a>
+    <a href="{% url 'company_list' %}">Back to List</a>
+</body>
+</html>

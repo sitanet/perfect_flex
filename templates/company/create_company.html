@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+          <div class="col-md-12">
+                <div class="page_title">
+                      <h2>Create Branch</h2>
+                </div>
+          </div>
+          <!-- form -->
+          <form method="POST" class="chart_of_account p-5 shadow-lg rounded rounded-5">
+            {% csrf_token %}
+            {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li style="font-size: 30px; color: brown; font-weight: bold;"  {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<h6 style="color: red;" >{{ form.errors }}</h6>
+              <div class="form-row">
+                    <div class="form-group col-md-4">
+                          <label for="general_ledger_accout_no">Branch Code .</label>
+                          <input type="text" class="form-control bg-light"
+                                id="general_ledger_accout_no"
+                                name="branch_code">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="general_ledger_accout_name">Company Name </label>
+                        <input type="text" class="form-control bg-light"
+                              id="general_ledger_accout_name"
+                              name="company_name">
+                  </div>
+                    <div class="form-group col-md-4">
+                          <label for="general_ledger_accout_name">Branch Name </label>
+                          <input type="text" class="form-control bg-light"
+                                id="general_ledger_accout_name"
+                                name="branch_name">
+                    </div>
+                  
+
+    
+    <div class="form-group col-md-4">
+                        <label for="general_ledger_accout_name">Contact Person</label>
+                        <input type="text" class="form-control bg-light"
+                              id="general_ledger_accout_name"
+                              name="contact_person">
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label for="general_ledger_accout_name">Office Address </label>
+                    <input type="text" class="form-control bg-light"
+                          id="general_ledger_accout_name"
+                          name="office_address">
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="general_ledger_accout_name">Contact Phone No </label>
+                <input type="text" class="form-control bg-light"
+                      id="general_ledger_accout_name"
+                      name="contact_phone_no">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="general_ledger_accout_name">Branch Session Date </label>
+            <input type="date" class="form-control bg-light"
+                  id="general_ledger_accout_name"
+                  name="session_date">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="general_ledger_accout_name">Registration Date </label>
+        <input type="date" class="form-control bg-light"
+              id="general_ledger_accout_name"
+              name="registration_date">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="general_ledger_accout_name">Expiration Date </label>
+    <input type="date" class="form-control bg-light"
+          id="general_ledger_accout_name"
+          name="expiration_date">
+          
+</div>
+
+<div class="form-group col-md-4">
+    <label for="general_ledger_accout_name">License Key  </label>
+    <input type="text" class="form-control bg-light"
+          id="general_ledger_accout_name"
+          name="license_key">
+</div>
+                    
+
+                   
+                    <button type="submit"
+                          class="btn w- btn-success mt-4 shadow-sm">Add</button>
+                          
+                    <!-- <button type="submit"
+                          class="btn w- btn-success mt-4 shadow-sm">Delete</button> -->
+              </div>
+              <a href="{% url 'company_list' %}" style="color: green; font-weight: bold;">Back to Company List</a>
+        </form>
+      
+  
+                <!-- Chart of Accoutwill come here -->
+          </div>
+  
+  
+    </div>
+  
+
+{% endblock %}
