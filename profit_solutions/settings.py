@@ -40,7 +40,7 @@ SECRET_KEY = config('SECRET_KEY')
 # DEBUG = config('DEBUG')
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','solutions-flex-dev.us-west-2.elasticbeanstalk.com','http://solutions-flex-dev.us-west-2.elasticbeanstalk.com/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -182,7 +182,7 @@ USE_L10N = True
 L10N = {
     'currency_symbol': 'N',  # Set your desired currency symbol here
 }
-config('USER')
+# config('USER')
 
 # AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 # AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
